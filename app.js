@@ -1,11 +1,12 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
-// Set the view engine to ejs
+// Set EJS as the view engine
 app.set('view engine', 'ejs');
 
 // Serve static files from the public folder
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Route for the home page
 app.get('/', (req, res) => {

@@ -6,6 +6,8 @@ body {
     background-color: black;
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -15,7 +17,8 @@ header {
     padding: 15px;
     width: 100%;
     -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
+    z-index: 2000;
 }
 
 nav {
@@ -71,7 +74,7 @@ nav {
 }
 
 .social-link {
-    color: #ffffff;
+    color: #d7d7d7;
     font-size: 24px;
     text-decoration: none;
     position: relative;
@@ -82,7 +85,7 @@ nav {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: #0d0d0d;
 }
 
 
@@ -112,8 +115,10 @@ nav {
 
 
 .svg-icon svg path {
-    fill: #ffffff; /* Initial fill color */
-    transition: fill 0.3s ease; /* Smooth transition */
+    fill: #ffffff;
+    /* Initial fill color */
+    transition: fill 0.3s ease;
+    /* Smooth transition */
 }
 
 
@@ -124,6 +129,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #About-me .container {
@@ -160,4 +166,94 @@ nav {
     border: 3px solid #caa377;
     padding: 3px;
 
+}
+
+
+#My-Skills {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#My-Skills h1{
+    color:#fff ;
+    padding-bottom: 10px;
+}
+
+
+/* #My-Skills h1::after {
+    content: '';
+    position: relative;
+    width: 200px;
+    height: 3px;
+    background-color: #46aec5;
+    left: auto;
+    display: inline-block;
+    top: 55px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+
+
+.splide {
+    width: 100%;
+    height: auto;
+}
+
+.splide__slide img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+.splide__arrow--next {
+    right: -5em;
+}
+
+.splide__arrow--prev {
+    left: -5em;
+}
+
+.splide__track.splide__track--slide.splide__track--ltr.splide__track--draggable{
+    padding-block: 40px !important;
+    border-radius: 24px !important;
+    border: 3px solid #caa377 !important;
+    background: rgba(255, 255, 255, 0) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(10px) !important;
+}
+.splide__list {
+    align-items: center;
+}
+.splide__slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.splide__arrows {
+    display: none;
+}
+
+
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.custom-prev {
+    left: -50px;
+}
+
+.custom-next {
+    right: -50px;
 }
