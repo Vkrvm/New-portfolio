@@ -1,10 +1,12 @@
-require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const mailgun = require('mailgun-js');
 
 const app = express();
+
+// Load environment variables from .env file
+require('dotenv').config();
 
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
@@ -16,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Mailgun setup with your API key and domain
+// Mailgun setup with your API key and domain from environment variables
 const mg = mailgun({ 
     apiKey: process.env.MAILGUN_API_KEY, 
     domain: process.env.MAILGUN_DOMAIN 
@@ -32,7 +34,7 @@ app.post('/send-email', (req, res) => {
     const { name, phone, email, message } = req.body;
 
     const emailData = {
-        from: 'Portfolio Contact Form <postmaster@sandboxdcff0947994d45f08f9046e1ae066bad.mailgun.org>',
+        from: 'Portfolio Contact Form <postmaster@sandboxd3a06c26d8ff488b965f579c1ee72a9c.mailgun.org>',
         to: 'mahakram35@gmail.com', // Your email address
         subject: `New Message from ${name}`,
         text: `You have received a new message from your website contact form.\n\n` +
