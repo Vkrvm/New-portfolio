@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "mailgun-js": "^0.22.0",

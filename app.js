@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -17,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Mailgun setup with your API key and domain
 const mg = mailgun({ 
-    apiKey: 'api_key', 
-    domain: 'domain' 
+    apiKey: process.env.MAILGUN_API_KEY, 
+    domain: process.env.MAILGUN_DOMAIN 
 });
 
 // Route for the home page
