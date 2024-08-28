@@ -1,3 +1,4 @@
+const compression = require('compression');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -14,6 +15,7 @@ app.set('view engine', 'ejs');
 // Serve static files from the public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(compression());
 // Parse incoming request bodies in a middleware before your handlers
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
