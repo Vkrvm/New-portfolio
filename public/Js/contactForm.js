@@ -15,17 +15,24 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         },
         body: JSON.stringify(formData),
     })
-        .then(response => response.json())
-        .then(data => {
-            // Display the response message
-            document.getElementById('responseMessage').innerText = data.message;
-
-            // Clear the form fields
-            if (data.success) {
-                document.getElementById('contactForm').reset();
-            }
-        })
-        .catch(error => {
-            document.getElementById('responseMessage').innerText = 'An error occurred. Please try again.';
-        });
+    .then(response => response.json())
+    .then(data => {
+        const responseDiv = document.getElementById('responseMessage');
+        responseDiv.style.display = 'block'; // Make the div visible
+        responseDiv.className = 'alert'; // Reset the classes for alert
+        if (data.success) {
+            responseDiv.classList.add('alert-success'); // Add success class
+            responseDiv.innerText = data.message; // Set success message
+            document.getElementById('contactForm').reset(); // Reset form fields
+        } else {
+            responseDiv.classList.add('alert-danger'); // Add error class
+            responseDiv.innerText = data.message; // Set error message
+        }
+    })
+    .catch(error => {
+        const responseDiv = document.getElementById('responseMessage');
+        responseDiv.style.display = 'block';
+        responseDiv.className = 'alert alert-danger';
+        responseDiv.innerText = 'An error occurred. Please try again.';
+    });
 });
