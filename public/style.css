@@ -8,6 +8,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: "Cairo", sans-serif;
+}
+
+div.container {
+    contain: layout style;
 }
 
 ::-webkit-scrollbar {
@@ -206,7 +211,7 @@ nav {
 }
 
 #About-me h1,
-#About-me h3 {
+#About-me h2 {
     color: #46aec5;
 }
 
@@ -309,7 +314,7 @@ nav {
     right: -50px;
 }
 
-footer  {
+footer {
     background: rgba(255, 255, 255, 0) !important;
     padding: 15px;
     width: 100%;
@@ -373,15 +378,61 @@ footer .col-12.col-lg-4 .row .col-12 h3 {
     border: 3px solid black;
     padding: 12px 20px;
     border-radius: 0px;
-    box-shadow: 2px 2px 1px  #ffffff;
+    box-shadow: 2px 2px 1px #ffffff;
     transition: all .2s ease;
     font-size: 1em;
     font-weight: bold;
-    color:#fff;
-  }
-  
-  .btn.btn-primary.w-100:hover {
+    color: #fff;
+}
+
+.btn.btn-primary.w-100:hover {
     transform: translate(-2px, -1px);
-    box-shadow: 7px 7px 1px  rgb(255, 255, 255);
+    box-shadow: 7px 7px 1px rgb(255, 255, 255);
     transition: all .2s ease-in;
-  }
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+
+    #About-me {
+        height: auto;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 80px;
+        margin-inline: auto;
+    }
+
+    #About-me p {
+        color: #fff;
+        font-weight: normal;
+        font-size: 1rem;
+        text-align: justify;
+        padding-inline-end: 0px;
+    }
+
+    #About-me .container .row .col-12.col-lg-4 .my-img img {
+        border-radius: 50%;
+        border: 3px solid #caa377;
+        padding: 3px;
+        width: 100%;
+        height: auto;
+    }
+    .custom-prev {
+        left: 40%;
+    }
+    .custom-next {
+        right: 40%;
+    }
+    .custom-arrow {
+        position: absolute;
+        top: 110%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
