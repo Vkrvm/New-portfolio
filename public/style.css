@@ -34,63 +34,6 @@ div.container {
     background-color: #555;
 }
 
-::-webkit-scrollbar {
-    width: 9px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #caa377;
-    border-radius: 10px;
-    border: 2px solid #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-}
-
-::-webkit-scrollbar {
-    width: 9px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #caa377;
-    border-radius: 10px;
-    border: 2px solid #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-}
-
-::-webkit-scrollbar {
-    width: 9px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #caa377;
-    border-radius: 10px;
-    border: 2px solid #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-}
-
 header {
     position: fixed;
     top: 0%;
@@ -114,11 +57,11 @@ nav {
     position: relative;
 }
 
-.nav-link:hover {
+.nav-link:hover , .nav-link:focus {
     color: #caa377 !important;
 }
 
-.nav-link::after {
+.nav-link::after  {
     content: '';
     position: absolute;
     width: 0;
@@ -129,7 +72,7 @@ nav {
     transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after , .nav-link:focus::after {
     width: 100%;
 }
 
@@ -328,23 +271,23 @@ footer {
     font-weight: bold;
 }
 
-footer .col-12.col-lg-4 {
+footer .col-12.col-lg-6 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .col-12.col-lg-4 img {
+footer .col-12.col-lg-6 img {
     width: 200px;
 }
 
-footer .col-12.col-lg-4 .row .col-12 {
+footer .col-12.col-lg-6 .row .col-12 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-footer .col-12.col-lg-4 .row .col-12 p {
+footer .col-12.col-lg-6 .row .col-12 p {
     color: #caa377;
     padding-bottom: 10px;
     border-bottom: 2px solid #46aec5;
@@ -391,6 +334,55 @@ footer .col-12.col-lg-4 .row .col-12 p {
     box-shadow: 7px 7px 1px rgb(255, 255, 255);
     transition: all .2s ease-in;
 }
+
+#Services .row .col-12 h1{
+color: #ffffff;
+padding-bottom: 10px;
+}
+
+#Services .row .col-12.col-lg-4.my-2 .card{
+    border-radius: 24px;
+    padding: 20px;
+    border: 3px solid #caa377;
+    background: rgba(255, 255, 255, 0) !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#Services .row .col-12.col-lg-4.my-2 .card .card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d63574;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#Services .row .col-12.col-lg-4.my-2 .card .card-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Services .row .col-12.col-lg-4.my-2 .card .card-body .col-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#Services strong , #Services li{
+    color: #ffffff;
+}
+#Services li{
+    margin-block: 8px;
+}
+
+
 
 @media (min-width: 0px) and (max-width: 992px) {
 
