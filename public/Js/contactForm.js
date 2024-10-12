@@ -21,11 +21,11 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         responseDiv.style.display = 'block'; // Make the div visible
         responseDiv.className = 'alert'; // Reset the classes for alert
         if (data.success) {
-            responseDiv.classList.add('alert-success'); // Add success class
+            responseDiv.classList.add('alert-success mt-3'); // Add success class
             responseDiv.innerText = data.message; // Set success message
             document.getElementById('contactForm').reset(); // Reset form fields
         } else {
-            responseDiv.classList.add('alert-danger'); // Add error class
+            responseDiv.classList.add('alert-danger mt-3'); // Add error class
             responseDiv.innerText = data.message; // Set error message
         }
     })
