@@ -37,7 +37,7 @@ app.post('/send-email', (req, res) => {
 
     const emailData = {
         from: 'Portfolio Contact Form <postmaster@sandboxd3a06c26d8ff488b965f579c1ee72a9c.mailgun.org>',
-        to: 'mahakram35@gmail.com', // Your email address
+        to: 'vkram101@icloud.com', // Your email address
         subject: `New Message from ${name}`,
         text: `You have received a new message from your website contact form.\n\n` +
               `Name: ${name}\n` +
